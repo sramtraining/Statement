@@ -1,0 +1,1 @@
+INSERT INTO AUTHOR (id,NAME, TITLE, BRIEF_PROFILE) VALUES (1,'APJ', 'Dr.', 'President of India');

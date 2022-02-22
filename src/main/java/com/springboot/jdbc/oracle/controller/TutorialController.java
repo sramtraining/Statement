@@ -62,6 +62,8 @@ public class TutorialController {
       tutorialRepository.save(new Tutorial(tutorial.getTitle(), tutorial.getDescription(), false));
       return new ResponseEntity<>("Tutorial was created successfully.", HttpStatus.CREATED);
     } catch (Exception e) {
+      e.printStackTrace();
+      System.out.println(e.getMessage());
       return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
