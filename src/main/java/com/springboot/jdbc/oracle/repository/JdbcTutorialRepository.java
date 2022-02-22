@@ -23,7 +23,7 @@ public class JdbcTutorialRepository implements TutorialRepository {
 
   @Override
   public int update(Tutorial tutorial) {
-    return jdbcTemplate.update("UPDATE tutorials SET title=?, description=?, published=? WHERE id=?",
+    return jdbcTemplate.update("UPDATE tutorials SET title=?, description=?, published=?,updated_time =SYSDATE WHERE id=?",
         new Object[] { tutorial.getTitle(), tutorial.getDescription(), tutorial.isPublished(), tutorial.getId() });
   }
 
