@@ -26,3 +26,25 @@ create TABLE tutorials (
 	 PRIMARY KEY ("ID")
 
    );
+
+
+
+--DML
+--CRUD
+
+INSERT INTO AUTHOR (name,TITLE,brief_profile)VALUES('SH','Dr','Professor');
+SELECT * from Author where name = 'SH';
+UPDATE author set title ='Dr.' where name = 'SH';
+DELETE from author   where name = 'SH';
+
+
+truncate TABLE author;
+
+--DDL
+create table Price
+(id VARCHAR2(3 CHAR),
+cost number(10));
+
+create or REPLACE VIEW V_STATEMENT AS (SELECT * FROM customer_statement);
+
+drop table author;
