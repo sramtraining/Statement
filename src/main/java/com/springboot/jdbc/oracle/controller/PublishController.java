@@ -4,6 +4,7 @@ import com.springboot.jdbc.oracle.model.Author;
 import com.springboot.jdbc.oracle.model.Publish;
 import com.springboot.jdbc.oracle.model.Tutorial;
 import com.springboot.jdbc.oracle.repository.AuthorRepository;
+import com.springboot.jdbc.oracle.repository.PublishRepository;
 import com.springboot.jdbc.oracle.repository.TutorialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,10 +21,11 @@ import java.util.List;
 @RequestMapping("/publish")
 public class PublishController {
     @Autowired
-    AuthorRepository publishRepository;
+    PublishRepository publishRepository;
     @GetMapping("/getPublish")
     public ResponseEntity<List<Publish>> getAllPublish() {
 
-        return  new ResponseEntity<>(publishRepository.getPublish(), HttpStatus.OK);
+        return  new ResponseEntity(publishRepository.getPublish(), HttpStatus.OK);
     }
 }
+

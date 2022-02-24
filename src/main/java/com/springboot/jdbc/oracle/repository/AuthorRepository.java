@@ -19,6 +19,4 @@ public class AuthorRepository {
 
     }
 
-    public Object getPublish() {
-    }
 }
