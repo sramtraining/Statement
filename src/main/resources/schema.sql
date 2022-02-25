@@ -19,3 +19,11 @@ create TABLE tutorials (
 	 PRIMARY KEY ("ID")
 
    );
+
+   --Publish
+   create TABLE Publish
+   	(  "NAME" VARCHAR2(255 BYTE),
+   	"TITLE" VARCHAR2(255 BYTE),
+   	"PUBLISHYEAR"  DATE(4)
+   	);
+
