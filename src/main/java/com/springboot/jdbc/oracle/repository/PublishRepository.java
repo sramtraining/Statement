@@ -1,6 +1,6 @@
 package com.springboot.jdbc.oracle.repository;
 
-import com.springboot.jdbc.oracle.model.Author;
+import com.springboot.jdbc.oracle.model.Publish;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,9 +11,16 @@ import java.util.List;
 public class PublishRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    public List<Publish> getPublish() {
+        return jdbcTemplate.query("SELECT * from publish", BeanPropertyRowMapper.newInstance(Publish.class));
+    }
 
-    public List<Author> getPublish() {
-        return jdbcTemplate.query("SELECT * from author", BeanPropertyRowMapper.newInstance(Author.class));
+    public Object createPublish() {
+        int save{"Publish publish"};
+        return null;
+    }
 
+    public void save(Publish publish) {
     }
 }
+

@@ -6,6 +6,9 @@ public class Publish {
     private String title;
     private long publishyear;
 
+    public Publish(String title, String title1, boolean b) {
+    }
+
     @Override
     public String toString() {
         return "Publish{" +

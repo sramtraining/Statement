@@ -16,7 +16,5 @@ public class AuthorRepository {
 
     public List<Author> getAuthors() {
         return jdbcTemplate.query("SELECT * from author", BeanPropertyRowMapper.newInstance(Author.class));
-
     }
-
 }
