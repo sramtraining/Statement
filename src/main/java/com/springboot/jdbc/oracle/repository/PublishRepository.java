@@ -21,6 +21,8 @@ public class PublishRepository {
     }
 
     public void save(Publish publish) {
+       jdbcTemplate.update("INSERT INTO publish (name, title, publishyear) VALUES(?,?,?)",
+                new Object[] {publish.getName(), publish.getTitle(), publish.getpublishyear() });
     }
 }
 

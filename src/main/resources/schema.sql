@@ -24,6 +24,6 @@ create TABLE tutorials (
    create TABLE Publish
    	(  "NAME" VARCHAR2(255 BYTE),
    	"TITLE" VARCHAR2(255 BYTE),
-   	"PUBLISHYEAR"  DATE(4)
+   	"PUBLISHYEAR"  NUMBER(4)
    	);
 

@@ -24,7 +24,7 @@ public class PublishController {
     @PostMapping("/Publishes")
     public ResponseEntity<String> createPublish(@RequestBody Publish publish) {
         try {
-            publishRepository.save(new Publish(publish.getTitle(), publish.getTitle(), false));
+            publishRepository.save(publish);
             return new ResponseEntity<>("publish was created successfully.", HttpStatus.CREATED);
         } catch (Exception e) {
             e.printStackTrace();
